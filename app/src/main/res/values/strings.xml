@@ -21,6 +21,11 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="open_maps">Open Maps</string>
-    <string name="daily_meal" />
-    <string name="about" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_cart">my_cart</string>
+    <string name="mycart">mycart</string>
+    <string name="my_card">My Card</string>
+    <string name="daily_meal">Daily Meal</string>
+    <string name="about">about</string>
 </resources>

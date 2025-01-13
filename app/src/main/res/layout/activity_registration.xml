@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:minWidth="45dp"
     android:minHeight="45dp"
-    tools:context=".RegistrationActivity">
+    tools:context=".activities.RegistrationActivity">
 
     <ImageView
         android:id="@+id/imageView2"

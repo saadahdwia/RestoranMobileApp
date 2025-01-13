@@ -2,4 +2,6 @@
 <resources>
     <item name="email" type="id" />
     <item name="fragment_content_daily_meal_fragment2" type="id" />
+    <item name="nav_daily_meal" type="id" />
+    <item name="nav_about" type="id" />
 </resources>

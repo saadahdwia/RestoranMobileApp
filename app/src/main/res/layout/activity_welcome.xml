@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity">
+    tools:context=".activities.WelcomeActivity">
 
     <ImageView
         android:foreground="@drawable/foreground_design"
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/imageview"
+        android:src="@drawable/savaris_welcome"
         tools:layout_editor_absoluteX="71dp"
         tools:layout_editor_absoluteY="-34dp" />
 
@@ -25,25 +25,25 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="32dp"
+        android:letterSpacing="0.2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".4"
+        android:layout_marginBottom="30dp"
         tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="388dp"
-        android:fontFamily="@font/lobster"
-        android:letterSpacing="0.20"
-        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="390dp"
         android:text="@string/nikmati_masakan_tiap_daerah"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:letterSpacing="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

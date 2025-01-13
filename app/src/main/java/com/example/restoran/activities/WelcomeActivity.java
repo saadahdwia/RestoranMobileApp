@@ -1,4 +1,4 @@
-package com.example.restoran;
+package com.example.restoran.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.restoran.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -20,10 +22,10 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void register(View view) {
-        startActivity(new Intent(WelcomeActivity.this,RegistrationActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, RegistrationActivity.class));
     }
 
     public void login(View view) {
-        startActivity(new Intent(WelcomeActivity.this,LoginActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
     }
 }

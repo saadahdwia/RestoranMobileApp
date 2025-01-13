@@ -1,10 +1,13 @@
-package com.example.restoran;
+package com.example.restoran.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.restoran.MainActivity;
+import com.example.restoran.R;
 
 public class LoginActivity extends AppCompatActivity {
 
