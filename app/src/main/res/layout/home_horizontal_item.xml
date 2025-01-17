@@ -10,59 +10,30 @@
     app:cardCornerRadius="30dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:orientation="vertical"
         android:padding="5dp">
 
         <ImageView
-            android:id="@+id/nasigr"
+            android:id="@+id/hor_img"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/nasi_goreng"
+            android:src="@drawable/pai_berry"
             android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/hor_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:layout_marginTop="10dp"
-            android:text="Nasi Goreng"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:fontFamily="@font/amita"/>
+            android:fontFamily="@font/amita"
+            android:text="Pai Berry"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="5dp">
-
-        <ImageView
-            android:id="@+id/nasigr"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/nasi_goreng"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/hor_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="10dp"
-            android:text="Nasi Goreng"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:fontFamily="@font/amita"/>
-
-    </LinearLayout>
-
-
-
 
 
 </androidx.cardview.widget.CardView>
