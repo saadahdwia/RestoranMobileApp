@@ -31,34 +31,24 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_home, container,false);
 
-//        // Inisialisasi tombol
-//        FloatingActionButton btn_whatsapp = root.findViewById(R.id.btn_whatsapp);
-//
-//        // Tambahkan aksi untuk tombol
-//        btn_whatsapp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Intent untuk membuka aplikasi WhatsApp
-//                String phoneNumber = "+628123456789"; // Nomor telepon tujuan
-//                Intent intent = new Intent(Intent.ACTION_VIEW);
-//                intent.setData(Uri.parse("https://wa.me/" + phoneNumber));
-//                startActivity(intent);
-//            }
-//        });
+        View root = inflater.inflate(R.layout.fragment_home, container,false);
 
         homeHorizontalRec = root.findViewById(R.id.home_hor_rec);
 
         homeHorModelList = new ArrayList<>();
 
-        homeHorModelList.add(new HomeHorModel(R.drawable.nasi_goreng,"Pizza"));
-        homeHorModelList.add(new HomeHorModel(R.drawable.hamburger,"Hamburger"));
-        homeHorModelList.add(new HomeHorModel(R.drawable.fried_potatoes,"Fries"));
-        homeHorModelList.add(new HomeHorModel(R.drawable.ice_cream,"Ice Cream"));
-        homeHorModelList.add(new HomeHorModel(R.drawable.nsandwich,"Sandwich"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.brownis_telur,"Brownis Telur"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.pai_berry,"Pai Berry"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.fillet_ikan,"Fillet Ikan Dengan Sayur"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.salad,"Salad Segar"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.sparkling_lemon,"Sparkling Lemon"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.jus_apel,"Jus Apel"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.air_selasih,"Air Selasih"));
+        homeHorModelList.add(new HomeHorModel(R.drawable.teh_chamomile,"Teh Chamomile"));
 
-        homeHorAdapter = new HomeHorAdapter(getActivity(),homeHorModelList);
+        homeHorAdapter = new HomeHorAdapter(homeHorModelList, getActivity());
+
         homeHorizontalRec.setAdapter(homeHorAdapter);
         homeHorizontalRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
         homeHorizontalRec.setHasFixedSize(true);
