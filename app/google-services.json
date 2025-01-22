@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1060031696809",
+    "project_id": "restoranmobileapp-5894b",
+    "storage_bucket": "restoranmobileapp-5894b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060031696809:android:c5bbdc19c708f8e8083eb8",
+        "android_client_info": {
+          "package_name": "com.example.restoran"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Vv8XhVYCH2nRs73OerR-GnpIUSqaR4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
