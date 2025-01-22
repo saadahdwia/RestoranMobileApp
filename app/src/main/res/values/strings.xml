@@ -28,4 +28,6 @@
     <string name="my_card">My Card</string>
     <string name="daily_meal">Daily Meal</string>
     <string name="about">about</string>
+    <string name="product_name">Product Name</string>
+    <string name="_10_00_23_00_wib">10.00 - 23.00 Wib</string>
 </resources>

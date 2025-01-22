@@ -50,7 +50,7 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-           imageView = itemView.findViewById(R.id.home_hor_rec);
+           imageView = itemView.findViewById(R.id.hor_img);
            name = itemView.findViewById(R.id.hor_text);
         }
     }
