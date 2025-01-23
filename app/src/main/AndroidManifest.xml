@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Restoran"
         tools:targetApi="31">
         <activity
-            android:name=".activities.WelcomeActivity"
+                android:name=".activities.WelcomeActivity"
             android:theme="@style/Theme.Restoran.NoActionBar"
             android:exported="true">
             <intent-filter>
@@ -39,11 +39,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

@@ -1,8 +1,12 @@
 package com.example.restoran.ui.home;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +18,17 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.restoran.MainActivity;
 import com.example.restoran.R;
+import com.example.restoran.activities.WelcomeActivity;
 import com.example.restoran.adapters.HomeHorAdapter;
 import com.example.restoran.adapters.HomeVerAdapter;
 import com.example.restoran.databinding.FragmentHomeBinding;
 import com.example.restoran.models.HomeHorModel;
 import com.example.restoran.models.HomeVerModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +43,44 @@ public class HomeFragment extends Fragment {
     List<HomeVerModel> homeVerModelList;
     HomeVerAdapter homeVerAdapter;
 
+    TextView textViewFullName;
+
+
+    void displayUserData() {
+        // Dapatkan FirebaseUser
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (user != null) {
+            // Ambil data dari FirebaseUser
+            String uid = user.getUid();
+            String email = user.getEmail();
+            String displayName = user.getDisplayName() != null ? user.getDisplayName() : "No Display Name";
+            Uri photoUrl = user.getPhotoUrl();
+
+            // Tampilkan data di UI
+            textViewFullName.setText("Name: " + displayName);
+
+            // Catat data lengkap di log
+            Log.d("UserData", "User ID: " + uid);
+            Log.d("UserData", "Email: " + email);
+            Log.d("UserData", "Display Name: " + displayName);
+            if (photoUrl != null) {
+                Log.d("UserData", "Photo URL: " + photoUrl.toString());
+            } else {
+                Log.d("UserData", "Photo URL: Not Set");
+            }
+
+            // Tampilkan UID jika diperlukan
+            Log.d("UserData", "UID: " + uid);
+        } else {
+            // Jika tidak ada pengguna login
+            Log.d("UserData", "No user is logged in");
+            textViewFullName.setText("No user logged in");
+        }
+    }
+
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,8 +89,9 @@ public class HomeFragment extends Fragment {
 
         homeHorizontalRec = root.findViewById(R.id.home_hor_rec);
         homeVerticalRec = root.findViewById(R.id.home_ver_rec);
+        textViewFullName = root.findViewById(R.id.textView8);
 
-
+        displayUserData();
         /////////////Horizontal RecyclerView
         homeHorModelList = new ArrayList<>();
 
